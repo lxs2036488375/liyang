@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>happy birthday</title>
+    <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery1.12.1.min.js" charset="utf-8"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+    <script>
+        //    添加音乐*************************************************************************************************
+        $(document).ready(function () {
+            $('#bg_music').append('<audio id="m_bg_music" loop="loop" preload="auto" autoplay="autoplay" src="public/happy.mp3" />');
+            var mp3=$('#m_bg_music')[0];
+
+            $('#bg_music_btn').click(function(){
+                var num = $('#bg_music_btn').attr('num');
+                if(num == "1")
+                {
+                    $('#bg_music_btn').attr('num','0');
+                    mp3.pause();
+                }
+                if(num == "0")
+                {
+                    $('#bg_music_btn').attr('num','1');
+                    mp3.play();
+                }
+            });
+        });
+    </script>
+    <style media="screen">
+      .zi{
+        float:left;
+        margin-right:16px;
+        height:30px;
+        line-height:30px;
+        width:30px;
+        text-align:center;
+        FONT-SIZE: 18pt;
+        COLOR: yellow;
+         FONT-FAMILY: 华文行楷;
+          mso-font-kerning: 1.0pt;
+           mso-ansi-language: EN-US;
+            mso-fareast-language: ZH-CN;
+             mso-bidi-language: AR-SA;
+              mso-hansi-font-family: 'Times New Roman';
+              mso-bidi-font-family: 'Times New Roman';
+      }
+      .article{
+        background-color: pink;
+        height:300px;
+        width: auto;
+        padding-top: 20px;
+      }
+      .article p{
+        text-align: center;
+        font-family: 楷体;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-role="page" id="pageone">
+      <div data-role="header" data-position="fixed">
+        <h1 style="font-family:楷体;font-size:16px;">生日快乐</h1>
+      </div>
+      <div  data-role="main" class="ui-content">
+        <!-- 轮播图 -->
+        <div>
+          <img src="public/zhutu.jpg" alt="" width="100%"/>
+        </div><br>
+        <div class="ui-grid-b ui-responsive">
+          <div class="ui-block-a">
+            <div class="zi" style="background-color:red;border:1px solid red;border-radius:50%;">今</div>
+            <div class="zi" style="background-color:orange;border:1px solid orange;border-radius:50%;">天</div>
+            <div class="zi" style="background-color:pink;border:1px solid pink;border-radius:50%;">是</div>
+            <div class="zi" style="background-color:#00CC00;border:1px solid #00CC00;border-radius:50%;">你</div>
+            <div class="zi" style="background-color:cyan;border:1px solid cyan;border-radius:50%;">的</div>
+            <div class="zi" style="background-color:blue;border:1px solid blue;border-radius:50%;">生</div>
+            <div class="zi" style="background-color:purple;border:1px solid purple;border-radius:50%;">日</div>
+          </div><br><br>
+           <div class="ui-block-b">
+             <div class="zi" style="background-color:purple;border:1px solid purple;border-radius:50%;">祝</div>
+             <div class="zi" style="background-color:blue;border:1px solid blue;border-radius:50%;">愿</div>
+             <div class="zi" style="background-color:cyan;border:1px solid cyan;border-radius:50%;">你</div>
+             <div class="zi" style="background-color:#DDDDDD;border:1px solid white;border-radius:50%;COLOR:RED">生</div>
+             <div class="zi" style="background-color:orange;border:1px solid orange;border-radius:50%;">日</div>
+             <div class="zi" style="background-color:red;border:1px solid red;border-radius:50%;">快</div>
+             <div class="zi" style="background-color:green;border:1px solid green;border-radius:50%;">乐</div>
+           </div>
+        </div><br>
+        <div class="article">
+            <p>祝词弹奏心之曲</p>
+            <p>你且欣然倾耳听</p>
+            <p>生花妙笔寄福语</p>
+            <p>日月星辰共愿许</p>
+            <p>快意信手拾不尽</p>
+            <p>乐事成瓦筑小窝</p>
+        </div>
+        <div id="bg_music"></div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#pageone" data-icon="home">首页</a></li>
+            <li><a href="#pagetwo" data-icon="audio">我的祝福</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div data-role="page" id="pagetwo">
+      <div data-role="header" data-position="fixed">
+        <h1>我的祝福</h1>
+        <a href="#pageone" data-transition="slide" data-role="button">back</a>
+      </div>
+      <div data-role="main"class="ui-content">
+        <div style="height:100px;border-top:1px solid lightgray;padding:10px;" width="100%">
+          <div style="float:left;">
+            <img src="public/1.jpg" alt="" width="100px;"height="100px;" />
+          </div>
+          <div style="overflow:hidden;text-overflow:ellipsis;" >
+              <span><a href="#xiangqing"style="text-decoration:none;font-size:12px;font-family:楷体;">一年中总有几个日子难忘,一生中总有几个人最值得珍惜,在这个最浪漫温情的日子,送去最真挚地问候,愿你的每一天都快乐无比!生日快乐!</a></span>
+         </div>
+        </div>
+        <div style="height:100px;border-top:1px solid lightgray;padding:10px;" width="100%">
+          <div style="float:left;">
+            <img src="public/2.jpg" alt="" width="100px;"height="100px;" />
+          </div>
+          <div>
+             <div style="overflow:hidden;text-overflow:ellipsis;" >
+               <span><a href="#xiangqing"style="text-decoration:none;font-size:13px;font-family:楷体;">没有花的芬芳,没有果的甜香;没有烛的明亮,没有歌的嘹亮。只有心香一瓣,关怀一份,为你送上浓浓祝福:生日快乐</a></span>
+             </div>
+          </div>
+        </div>
+        <div style="height:100px;border-top:1px solid lightgray;padding:10px;" width="100%">
+          <div style="float:left;">
+            <img src="public/3.gif" alt="" width="100px;"height="100px;" />
+          </div>
+          <div>
+             <div style="overflow:hidden;text-overflow:ellipsis;" >
+               <span><a href="#xiangqing"style="text-decoration:none;font-size:12px;font-family:楷体;">祈望你心灵深处芳草永绿,青春常驻,笑口常开。祝你生日快乐,健康幸福!</a></span>
+             </div>
+          </div>
+        </div>
+        <div style="height:100px;border-top:1px solid lightgray;padding:10px;" width="100%">
+          <div style="float:left;">
+            <img src="public/4.jpg" alt="" width="100px;"height="100px;" />
+          </div>
+          <div>
+             <div style="overflow:hidden;text-overflow:ellipsis;" >
+               <span><a href="#xiangqing"style="text-decoration:none;font-size:12px;font-family:楷体;">太阳是金色的,月亮是银色的,你的生日是彩色的,愿你被幸福环绕,被好运追逐,被快乐降伏,被笑容粘住。那时别忘了,有人在远方为你祝福,生日快乐!</a></span>
+             </div>
+          </div>
+        </div>
+        <div style="height:100px;border-top:1px solid lightgray;padding:10px;" width="100%">
+          <div style="float:left;">
+            <img src="public/5.jpg" alt="" width="100px;"height="100px;" />
+          </div>
+          <div>
+             <div style="overflow:hidden;text-overflow:ellipsis;" >
+               <span><a href="#xiangqing"style="text-decoration:none;font-size:12px;font-family:楷体;">Each birthday is a milestone we touch along life\'s way. May your birthday be happy in more ways than one. </a></span>
+             </div>
+          </div>
+        </div>
+        <div style="height:100px;border-top:1px solid lightgray;padding:10px;" width="100%">
+          <div style="float:left;">
+            <img src="public/6.jpg" alt="" width="100px;"height="100px;" />
+          </div>
+          <div>
+             <div style="overflow:hidden;text-overflow:ellipsis;margin-bottom:20px;" >
+               <span><a href="#pagethree"style="text-decoration:none;font-size:12px;font-family:楷体;">在你生日的这一天，我将最真心的祝福送给你，我们都是漫漫人生路中的甲乙丙丁，但遇见是这一生最该庆幸的事情，祝愿你在未来的道路上能够心想事成</a></span>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#pageone" data-icon="home">首页</a></li>
+            <li><a href="#pagetwo" data-icon="audio">我的祝福</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    <div data-role="page" id="pagethree">
+      <div data-role="header">
+        <h1>生日快乐，我想对你说</h1>
+        <a href="#pagetwo" data-transition="slide" data-role="button">back</a>
+      </div>
+      <div data-role="main" class="ui-content"style="background-color:pink;">
+        <div >
+          <p>
+            生日快乐。
+          </p>
+          <p>
+            从前。回想过去的时光，突然发觉，我们已经相识好几年。过往的时光就像是老电影的情景一幕幕闪现。
+            这些年，见你哭过、笑过、无奈过、不知所措过，我不知道你有没有放弃过，但我知道你一直在坚强。
+            我明白：你一直在顶着无数的压力在奋斗，很多困难的时期你都自己走过来了，相信现在和未来你也可以的!
+          </p>
+          <p>
+            现在。真的从来没有想过再相遇，你还是扮演的那个鼓励我的角色。给你打那个电话的时候，真的没有考虑过结果，
+            也没想过你会不会不接我的电话，直到你问我给你打电话前有没有先琢磨琢磨这个电话该不该打·····
+            我不知道该说什么了。总之，谢谢你，能够原谅我的任性，谢谢你帮我走过那些困难时期的日子，我都铭记在心。
+            在这特殊的日子里，我想对你说：感谢你，一直以来对我的鼓励与包容。以后的日子，我会努力更加坚强。
+          </p>
+          <p>
+            不是没心没肺，只是从来没有想过。那天陪你看医生，在公交站，你突然就问了一句：“要是我有一天得了癌症你会怎么办”
+            我当时真的是一脸懵逼啊，然后你说：“我知道了，你肯定会没心没肺的笑着就过去了”。卧槽，我特么也不知道怎么办啊。
+            我回来想了很久那个问题，都不知道该怎么回答，后来不想了，主要是你肯定不会得的啦，放心。
+          </p>
+          <p>
+            未来。2016年，我们都即将跨越一个阶段，走进一个新阶段。谁都不能够预料到未来的日子里发生什么样的事情，
+            但是我们会彼此祝愿对方：幸福美满！
+          </p>
+          <p>
+            生日快乐。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
